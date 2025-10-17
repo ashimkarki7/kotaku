@@ -1,0 +1,7 @@
+@use '@/styles/variables/variables' as *;
+@use '../variables/_mixins.scss' as *;
+
+.card {
+  @include card;
+  padding: 1rem;
+}

@@ -1,0 +1,47 @@
+@use '../variables/variables' as *;
+
+.form__label {
+  display: block;
+  font: 600 0.85rem $ff-sans;
+  margin-bottom: 0.35rem;
+  color: $gray-0;
+}
+.qty {
+  display: inline-grid;
+  grid-template-columns: auto 3ch auto;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+.qty__btn {
+  inline-size: 2.25rem;
+  block-size: 2.25rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+  background: #f9fafb;
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.qty__input {
+  width: 3ch;
+  padding: 0.4rem;
+  text-align: center;
+  border: 0;
+  font-weight: 600;
+}
+
+.swatch {
+  --size: 34px;
+  inline-size: var(--size);
+  block-size: var(--size);
+  border-radius: 999px;
+  border: 2px solid #e5e7eb;
+  background: var(--swatch);
+  cursor: pointer;
+}
+.swatch.is_active {
+  outline: 2px solid $brand-600;
+  outline-offset: 2px;
+}

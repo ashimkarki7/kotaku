@@ -1,0 +1,16 @@
+@use '../variables/variables' as *;
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  font: 600 0.75rem/1 $ff-sans;
+}
+.badge__success {
+  background: rgba($success, 0.12);
+  color: #0a7c2a;
+}
+.badge__danger {
+  background: rgba($danger, 0.12);
+  color: #a11212;
+}

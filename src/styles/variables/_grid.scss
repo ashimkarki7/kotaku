@@ -1,0 +1,27 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.container {
+  width: min(100% - 2rem, $container);
+  margin-inline: auto;
+}
+
+.grid {
+  display: grid;
+  gap: $gap;
+}
+.grid--2 {
+  grid-template-columns: 1fr;
+  @include respond(md) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.grid--3 {
+  grid-template-columns: 1fr;
+  @include respond(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.grid--auto {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}

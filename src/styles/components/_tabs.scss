@@ -1,0 +1,39 @@
+@use '../variables/variables' as *;
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.tab {
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  font: 600 0.9rem $ff-sans;
+  cursor: pointer;
+}
+.tab.is_active {
+  background: #e6f0ff;
+  border-color: #cfe0ff;
+  color: $brand-700;
+}
+.tabs__line .tab {
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+}
+.tabs__line .tab.is-active {
+  border-color: $brand-700;
+  background: transparent;
+}
+.tabpanels {
+  margin-top: 1rem;
+}
+.tabpanel {
+  display: none;
+}
+.tabpanel.is_active {
+  display: block;
+}

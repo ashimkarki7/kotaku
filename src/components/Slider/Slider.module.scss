@@ -1,0 +1,209 @@
+@use '../../styles/variables/index' as *;
+
+.customSlider {
+  position: relative;
+  transition: 0.4s;
+  width: 100%;
+  background: rgb(231, 231, 231);
+  min-height: 700px;
+  display: flex;
+  align-items: flex-start;
+
+  .swiperContainer {
+    width: 100%;
+    touch-action: pan-y;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+  }
+
+  .slideContent {
+    @include flexCenter;
+    margin: 4rem 30rem;
+  }
+
+  .textContent {
+    font-size: 16px;
+    flex: 1;
+
+    .badge {
+      font-weight: 600;
+      color: rgb(71, 71, 71);
+      padding: 0.25rem 0.5rem;
+      font-size: 24px;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      color: rgb(22, 22, 22);
+      font-size: 4rem;
+      font-weight: bold;
+      margin: 0.5rem 0;
+    }
+
+    .description {
+      font-size: 16px;
+      font-weight: 400;
+      color: rgb(85, 85, 85);
+      max-width: 400px;
+    }
+
+    .readMoreButton {
+      display: none;
+    }
+
+    .buttons {
+      margin-top: 1.5rem;
+
+      button {
+        padding: 0.75rem 1.5rem;
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+        margin-right: 1rem;
+      }
+
+      .buyNow {
+        background-color: #a47d4f;
+        color: white;
+      }
+
+      .viewDetails {
+        background-color: transparent;
+        border: 1px solid #a47d4f;
+        color: #a47d4f;
+      }
+    }
+  }
+
+  .imageContent {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    .imageCircle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        max-width: 280px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .paginationDots {
+    z-index: 99;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transform: translateY(-50%);
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #c5c5c5;
+
+      &.active {
+        background-color: #a47d4f;
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+  @media (max-width: 480px) {
+    .slideContent {
+      flex-direction: column;
+      margin: 1rem 1rem;
+    }
+    .textContent {
+      margin-bottom: 1.5rem;
+      h2 {
+        font-size: 3rem;
+      }
+
+      .description {
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: 8.5em; // around 5 lines
+        transition: max-height 0.3s ease-in-out;
+        font-size: 16px;
+        font-weight: 400;
+        color: rgb(85, 85, 85);
+        max-width: 400px;
+      }
+      .expanded {
+        -webkit-line-clamp: unset;
+        max-height: none;
+      }
+
+      .readMoreButton {
+        white-space: nowrap;
+        background: none;
+        border: none;
+        color: #a47d4f;
+        font-weight: 600;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.customSlider1 {
+  position: relative;
+  transition: 0.4s;
+  width: 100%;
+
+  .swiperContainer {
+    width: 100%;
+    touch-action: pan-y;
+    position: relative;
+    padding: 0;
+    z-index: 1;
+  }
+
+  .circleContent {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 2px solid rgb(67, 71, 78);
+    //transition: border-color 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+      border-radius: 50%;
+      border: 2px dashed rgb(255, 112, 4);
+    }
+
+    img {
+      width: 80px;
+      height: 70px;
+      object-fit: scale-down;
+      margin-bottom: 10px;
+    }
+
+    span {
+      color: black;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+}

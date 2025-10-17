@@ -1,0 +1,29 @@
+@use '@/styles/variables/variables' as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.1rem;
+  border-radius: $radius;
+  border: 1px solid transparent;
+  font: 600 $fs-400 $ff-sans;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.btn__primary {
+  background: $brand-600;
+  color: #fff;
+}
+.btn__primary:hover {
+  background: $brand-700;
+}
+.btn__ghost {
+  background: transparent;
+  color: $brand-700;
+  border-color: rgba($brand-700, 0.25);
+}
+.btn__ghost:hover {
+  background: rgba($brand-700, 0.08);
+}
